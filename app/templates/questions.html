@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Questions:</h1>
+    <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+           <p class="text-light bg-dark">
+                {{ form.age.label }}<br>
+                {{ form.age(size=12) }}
+            </p>
+            <p>
+                {{ form.gender.label }}<br>
+                {{ form.gender(size=12) }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+{% endblock %}
